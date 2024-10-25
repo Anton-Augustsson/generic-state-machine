@@ -37,6 +37,19 @@ class GSM {
     GSM(StateTable_t<NUM_STATES> stt, States_t<NUM_STATES> s) 
       : state_transition_table(stt), states(s) {}
 
+    // TODO: this evaluates so... should be mentioned in the name?
+    void print() {
+      for (std::size_t i = 0; i < NUM_STATES; ++i) {
+        for (std::size_t j = 0; j < NUM_STATES; ++j) {
+          std::cout << "state_table[" << i << "][" << j << "] = ";
+          state_transition_table[i][j].print();  // Print the expression
+          std::cout << " (evaluates to " << state_transition_table[i][j].evaluate() << ")  ";
+        }
+        std::cout << std::endl;
+      }
+      std::cout << std::endl;
+    }
+
   private:
     StateTable_t<NUM_STATES> state_transition_table;
     States_t<NUM_STATES> states;
