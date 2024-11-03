@@ -3,20 +3,21 @@
 
 #include "expr.hpp"
 #include <functional>
+#include <cstdint>
 
 using func_t = std::function<void()>;
 
 class State {
   public:
-    State(func_t enter_func_param, func_t execute_func_param, func_t exit_func_param) 
-      : enter_func(enter_func_param), execute_func(enter_func_param), exit_func(enter_func_param) {}
+    State(uint8_t id_param, func_t enter_func_param, func_t execute_func_param, func_t exit_func_param) 
+      : id(id_param), enter_func(enter_func_param), execute_func(execute_func_param), exit_func(exit_func_param) {}
 
     void enter() const { enter_func(); };
     void execute() const { execute_func(); };
     void exit() const { exit_func(); };
 
   private:
-    int id;
+    int id; // This should be generated so no one can introduce error
     int period_ms;
 
     func_t enter_func;
@@ -46,8 +47,11 @@ using States_t = std::array<State, NUM_STATES>;
 template <std::size_t NUM_STATES>
 class GSM {
   public:
-    GSM(StateTable_t<NUM_STATES> stt, States_t<NUM_STATES> s) 
-      : state_transition_table(stt), states(s) {}
+    GSM(uint8_t start_state_param, StateTable_t<NUM_STATES> stt, States_t<NUM_STATES> s) 
+      : curent_state(start_state_param), state_transition_table(stt), states(s) {
+        states[curent_state].enter();
+        states[curent_state].execute();
+      }
 
     // TODO: this evaluates so... should be mentioned in the name?
     void print_state_transition_stable() {
@@ -88,7 +92,26 @@ class GSM {
       std::cout << std::endl;
     }
 
+    void step() {
+      // TODO: execute one step
+      for (uint8_t i = 0; i < NUM_STATES; ++i ) {
+        if (state_transition_table[curent_state][i].evaluate()) {
+          states[curent_state].exit();
+          curent_state = i;
+          states[curent_state].enter();
+          break;
+        }
+      }
+
+      states[curent_state].execute();
+    }
+
+    void run() {
+      // TODO: run for ever or until terminated
+    }
+
   private:
+    uint8_t curent_state;
     StateTable_t<NUM_STATES> state_transition_table;
     States_t<NUM_STATES> states;
 };
