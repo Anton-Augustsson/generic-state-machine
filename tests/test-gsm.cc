@@ -6,6 +6,7 @@
 #include <functional>
 #include <iostream>
 #include <cstdint>
+#include <memory>
 #include <ostream>
 #include <random>
 
@@ -22,12 +23,13 @@ GSM<4U> basic_state_machine() {
     const std::size_t num_states = 4U;
 
 
-    State s1(0, s1_enter, s1_execute, s1_exit, 300);
-    State s2(1, s2_enter, s2_execute, s2_exit, 300);
-    State s3(2, s3_enter, s3_execute, s3_exit, 200);
-    State s4(3, s4_enter, s4_execute, s4_exit, 400);
+    StatePeriodic s1 = StatePeriodic(0, s1_enter, s1_execute, s1_exit, 300);
+    StatePeriodic s2 = StatePeriodic(1, s2_enter, s2_execute, s2_exit, 300);
+    StatePeriodic s3 = StatePeriodic(2, s3_enter, s3_execute, s3_exit, 200);
+    StatePeriodic s4 = StatePeriodic(3, s4_enter, s4_execute, s4_exit, 400);
 
     States_t<num_states> states = {s1, s2, s3, s4};
+
     uint8_t start_state = 0; // TODO: easy error by one s0 is that a thing
 
     // 2D array of BoolExpr
