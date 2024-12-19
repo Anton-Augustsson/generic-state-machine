@@ -1,0 +1,2 @@
+/usr/bin/ar qc libgsmLibrary.a CMakeFiles/gsmLibrary.dir/gsm.cc.o CMakeFiles/gsmLibrary.dir/expr.cc.o
+/usr/bin/ranlib libgsmLibrary.a
