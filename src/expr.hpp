@@ -5,6 +5,8 @@
 #include <functional>
 #include <iostream>
 
+namespace expr {
+
 struct BoolExpr {
     std::function<bool()> expr;   // Lambda expression that returns a bool
     std::string description;      // String description of the lambda expression
@@ -28,6 +30,7 @@ struct BoolExpr {
     }
 };
 
+}
 
 
 #endif /* EXPR_HPP */

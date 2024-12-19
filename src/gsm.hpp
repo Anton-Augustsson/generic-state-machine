@@ -8,8 +8,11 @@
 #include <thread>
 #include <chrono>
 
+using namespace expr;
+
 namespace gsm {
 using func_t = std::function<void()>;
+
 
 class State {
   public:
