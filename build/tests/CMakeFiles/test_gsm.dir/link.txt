@@ -1,1 +1,1 @@
-/usr/lib64/ccache/c++ CMakeFiles/test_gsm.dir/test_gsm.cc.o -o test_gsm  ../src/libgsmLibrary.a 
+/usr/lib64/ccache/c++ -g CMakeFiles/test_gsm.dir/test_gsm.cc.o -o test_gsm  ../src/libgsmLibrary.a 

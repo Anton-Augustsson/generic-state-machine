@@ -1,6 +1,7 @@
-#include "../expr.hpp"
-#include "../gsm.hpp"
-#include "stub-func.hpp"
+
+#include "gsm.hpp"
+#include "expr.hpp"
+#include "stub_func.hpp"
 
 #include <array>
 #include <functional>

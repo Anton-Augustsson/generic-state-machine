@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/anau/Development/generic-state-machine/build/src",
+  "command": "/usr/lib64/ccache/c++  -I/home/anau/Development/generic-state-machine/src -g -std=gnu++17 -o CMakeFiles/gsmLibrary.dir/gsm.cc.o -c /home/anau/Development/generic-state-machine/src/gsm.cc",
+  "file": "/home/anau/Development/generic-state-machine/src/gsm.cc",
+  "output": "src/CMakeFiles/gsmLibrary.dir/gsm.cc.o"
+},
+{
+  "directory": "/home/anau/Development/generic-state-machine/build/src",
+  "command": "/usr/lib64/ccache/c++  -I/home/anau/Development/generic-state-machine/src -g -std=gnu++17 -o CMakeFiles/gsmLibrary.dir/expr.cc.o -c /home/anau/Development/generic-state-machine/src/expr.cc",
+  "file": "/home/anau/Development/generic-state-machine/src/expr.cc",
+  "output": "src/CMakeFiles/gsmLibrary.dir/expr.cc.o"
+},
+{
+  "directory": "/home/anau/Development/generic-state-machine/build/tests",
+  "command": "/usr/lib64/ccache/c++  -I/home/anau/Development/generic-state-machine/src -g -std=gnu++17 -o CMakeFiles/test_gsm.dir/test_gsm.cc.o -c /home/anau/Development/generic-state-machine/tests/test_gsm.cc",
+  "file": "/home/anau/Development/generic-state-machine/tests/test_gsm.cc",
+  "output": "tests/CMakeFiles/test_gsm.dir/test_gsm.cc.o"
+}
+]

@@ -3,5 +3,8 @@ Describing the entire state machine in just a few lines of code using a version 
 
 ## Build
 ```bash 
-g++ example.cc
+cmake -S . -B build
+cmake --build build
+cd build
+ctest # optionaly with --verbose
 ```

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Linux-c++"
+	BuildStamp="20241219-1927-Experimental"
+	Name="sagemcom.ip"
+	Generator="ctest-3.27.7"
+	CompilerName="/usr/lib64/ccache/c++"
+	CompilerVersion="12.3.1"
+	OSName="Linux"
+	Hostname="sagemcom.ip"
+	OSRelease="6.5.12-100.fc37.x86_64"
+	OSVersion="#1 SMP PREEMPT_DYNAMIC Mon Nov 20 22:28:44 UTC 2023"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="154"
+	ProcessorCacheSize="18432"
+	NumberOfLogicalCPU="16"
+	NumberOfPhysicalCPU="12"
+	TotalVirtualMemory="8191"
+	TotalPhysicalMemory="31788"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="978.191"
+	>
+	<Testing>
+		<StartDateTime>Dec 19 20:30 CET</StartDateTime>
+		<StartTestTime>1734636641</StartTestTime>
+		<TestList>
+			<Test>./tests/TestGSMLibrary</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>TestGSMLibrary</Name>
+			<Path>./tests</Path>
+			<FullName>./tests/TestGSMLibrary</FullName>
+			<FullCommandLine>/home/anau/Development/generic-state-machine/build/tests/test_gsm</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>6.00525</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/anau/Development/generic-state-machine/build/tests/test_gsm</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJztUc0OgjAMPo+n6BMQNnbFp/BmPCAUIUEwtCi+vUPkZ2Di38WDyZqu3dd+3VcsGCsgDhlBOthgVHNW7IeMICkEKWO+MS2EYxJJmBMK0UAQgLp7v/WrAG4Q1eVM6RRqQfwB0rcZoD1ELyCLNo/n88R42mGkFfuzWNvxqyJ8SfLX/XPd5ZTEm5HY79qODUnGo+yTJagFv3q6pPea/WTGdV1ns04zgmNYMZQJcIrASOZe87FmOIcEFR7KE8ZAWREhmE9jEyHG1IHTCikt87itlp7SsLuYBu7WuQJs3Amk====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Dec 19 20:30 CET</EndDateTime>
+		<EndTestTime>1734636647</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
