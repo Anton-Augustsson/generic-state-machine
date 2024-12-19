@@ -16,6 +16,8 @@ namespace stateVariables {
     int x; // This will change and influence the state matrix
 }
 
+using namespace gsm;
+
 GSM<4U> basic_state_machine() {
     using namespace stateVariables;
 

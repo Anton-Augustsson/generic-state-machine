@@ -8,6 +8,7 @@
 #include <thread>
 #include <chrono>
 
+namespace gsm {
 using func_t = std::function<void()>;
 
 class State {
@@ -144,5 +145,6 @@ class GSM {
 
 
 #define EXPR(e) BoolExpr([&]() { return (e); }, #e)
+}
 
 #endif /* GSM_HPP */
