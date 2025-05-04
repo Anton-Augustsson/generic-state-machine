@@ -8,3 +8,6 @@ cmake --build build
 cd build
 ctest # optionaly with --verbose
 ```
+
+## Setup for VSCode
+- [Cmake-presets](https://github.com/microsoft/vscode-cmake-tools/blob/main/docs/cmake-presets.md)
